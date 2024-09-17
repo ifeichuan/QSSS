@@ -38,7 +38,8 @@ async function config(){
   },
   markdown:{
     math:true
-  }
+  },
+  base:'/',
   }
 }
 export default config
