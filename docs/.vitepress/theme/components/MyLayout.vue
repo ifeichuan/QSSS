@@ -3,7 +3,7 @@
     <template #doc-before></template>
     <!-- Home Slot -->
      <template #home-hero-after><HomeHero/></template>
-     <template #home-features-after><Page/></template>
+     <template #home-features-after><Pages/></template>
 </Layout>
 </template>
 
@@ -12,6 +12,7 @@ import  DefaultTheme  from 'vitepress/theme';
 import HomeHero from './HomeHero.vue';
 import { useData } from 'vitepress';
 import { nextTick, provide } from 'vue'
+import Pages from './Pages.vue'
 const {Layout} = DefaultTheme
 const { isDark } = useData()
 

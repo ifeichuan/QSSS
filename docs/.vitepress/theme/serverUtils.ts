@@ -16,6 +16,8 @@ const posts = paths.map((item)=>{
 posts.sort((a,b)=>{
     return new Date(b.date).getTime() - new Date(a.date).getTime()
 })
+console.log(posts);
+
 return posts
 }
 
