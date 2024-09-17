@@ -39,7 +39,7 @@ async function config(){
   markdown:{
     math:true
   },
-  base:'/QSSS/',
+  base:'.',
   }
 }
 export default config
