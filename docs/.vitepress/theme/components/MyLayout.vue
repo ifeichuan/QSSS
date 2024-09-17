@@ -2,6 +2,7 @@
   <Layout>
       <!-- <template #layout-top style="background:rgba(0, 0, 0, 0.5);"></template> -->
       <template #doc-before></template>
+      <template #doc-footer-before><DocFooter/></template>
       <!-- Home Slot -->
        <template #home-hero-after><HomeHero/></template>
        <template #home-features-after><Pages/></template>

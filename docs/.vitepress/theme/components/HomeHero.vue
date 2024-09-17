@@ -1,9 +1,10 @@
 <template>
   <div class="container">
     <FeiChuan/>
+    
   </div>
   <div class="introduce">
-    <h1> A newbie who dreams of becoming a full-stack developer👋.</h1>
+    <h1> A newbie who dreams of becoming a full-stack developer<span style="font-size: x-large;">👋</span>.</h1>
   </div>
 </template>
 
@@ -11,14 +12,15 @@
 import { useData } from 'vitepress';
 import FeiChuan from './FeiChuan.vue';
 const Data = useData()
-console.log(Data)
-console.log(Data.theme.value.postsLength)
+// console.log(Data)
+// console.log(Data.theme.value.postsLength)
 </script>
 
 <style scoped>
 /*  样式  */
 .container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 15vh;

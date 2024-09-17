@@ -6,36 +6,30 @@ const paths = await getPostMDFilePaths()
 const posts = paths.map((item)=>{
     const content = fs.readFileSync(item,'utf-8')
     const {data} = matter(content)
-    console.log(data)
+    // console.log(data)
     return {
         text: data.title,
         link: `posts/${item.split('/')[1].split('.')[0]}`,
-        date: data.date_created.split(' ')[1].split(',')[0]
+        date: data.date_created.split(' ')[1].split(',')[0],
+        tags: data.tags
     }
 })
+// 根据日期排序
 posts.sort((a,b)=>{
     return new Date(b.date).getTime() - new Date(a.date).getTime()
 })
-console.log(posts);
+// console.log(posts);
 
 return posts
 }
 
-
-function _convertDate(date:string){
-    const dateObj = new Date(date)
-    const year = dateObj.getFullYear()
-    const month = dateObj.getMonth() + 1
-    const day = dateObj.getDate()
-    return `${year}-${month}-${day}`
-}
 
 async function getPostMDFilePaths() {
     let paths = await globby(["**.md"], {
       ignore: ["node_modules", "README.md",'index.md'],
     });
     // 只取posts目录下的md文件
-    console.log(paths);
+    // console.log(paths);
     return paths.filter((item) => item.includes("posts/"));
   }
 
@@ -44,6 +38,6 @@ export async function getPostsLength(){
     const posts = await globby(['**.md'],{
         ignore:["node_modules","README.md",'index.md']
     })
-    console.log(posts)
+    // console.log(posts)
     return posts.length
 }

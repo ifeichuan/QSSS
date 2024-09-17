@@ -35,7 +35,6 @@ async function config(){
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  
   },
   markdown:{
     math:true
