@@ -28,6 +28,7 @@ async function config(){
       provider:"local"
     },
     nav: [
+      { text: '首页', link: '/' },
       { text: '文章', link: '/archives' }
     ],
     // aside: false,
@@ -39,7 +40,7 @@ async function config(){
   markdown:{
     math:true
   },
-  base:'.',
+  base:'/',
   }
 }
 export default config
