@@ -39,6 +39,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .page{
     display: flex;
@@ -46,7 +47,8 @@ h2{
     justify-content: center;
     flex-wrap: wrap;    
     margin:20px;
-    width: 40%;
+    width: 60vw;
+    max-width: 800px;
     border: 3px solid;
     border-radius: 10px;
     box-shadow: 5px 5px;

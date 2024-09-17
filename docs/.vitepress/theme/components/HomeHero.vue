@@ -2,8 +2,8 @@
   <div class="container">
     <FeiChuan/>
   </div>
-  <div class="title">
-    <span>A newbie who dreams of becoming a full-stack developer👋.</span>
+  <div class="introduce">
+    <h1> A newbie who dreams of becoming a full-stack developer👋.</h1>
   </div>
 </template>
 
@@ -24,10 +24,13 @@ console.log(Data.theme.value.postsLength)
   height: 15vh;
   margin-top: 100px;
 }
-.title{
+.introduce{
+  /* margin:10px; */
   display: flex;
   align-content: center;
   justify-content: center;
+  width: 100%;
   margin-top: 50px;
+  text-align: center;
 }
 </style>

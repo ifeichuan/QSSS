@@ -10,7 +10,7 @@ const posts = paths.map((item)=>{
     return {
         text: data.title,
         link: `posts/${item.split('/')[1].split('.')[0]}`,
-        date: data.date_created
+        date: data.date_created.split(' ')[1].split(',')[0]
     }
 })
 posts.sort((a,b)=>{
