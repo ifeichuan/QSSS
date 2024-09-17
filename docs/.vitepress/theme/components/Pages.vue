@@ -46,7 +46,7 @@ h2{
     justify-content: center;
     flex-wrap: wrap;    
     margin:20px;
-    width: 800px;
+    width: 40%;
     border: 3px solid;
     border-radius: 10px;
     box-shadow: 5px 5px;
