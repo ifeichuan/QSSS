@@ -5,8 +5,10 @@
     <div class="pages">
         <div class="page" v-for="post in theme.posts" :key="post.link">
             <!-- <div class="content"> -->
-            <div class="title"><a :href="post.link">{{post.text}}</a></div>
+                <a :href="post.link">
+            <div class="title">{{post.text}}</div>
             <div class="date">{{post.date}}</div>
+        </a>
         <!-- </div> -->
         </div>
     </div>
@@ -55,5 +57,8 @@ h2{
 }
 .title,.date{
     margin: 5px;
+}
+.page:hover{
+    background:linear-gradient(to right, #0079d5, #0079d5);
 }
 </style>

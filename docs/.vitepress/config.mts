@@ -17,6 +17,7 @@ async function config(){
   rewrites:{
     // "/posts/:page": "/:page.md"
   },
+  
   themeConfig: {
     siteTitle:"扉川川の博客",
     posts:await getPosts(),
@@ -33,6 +34,10 @@ async function config(){
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
+  
+  },
+  markdown:{
+    math:true
   }
   }
 }
