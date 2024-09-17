@@ -2,6 +2,7 @@
     --vp-font-family-base: "LXGW WenKai GB Screen", "Inter var experimental",
     "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --vp-font-family-mono:"FOT-TsukuARdGothic Std D";
     --vp-nav-bg-color: rgba(255, 255, 255, 0.8);
 }
 .dark{
