@@ -24,6 +24,9 @@ let color = ["white","black"]
 const {isDark} = useData()
 onMounted(()=>{
     pathAll = document.getElementsByTagName('path')
+    console.log(isDark.value);
+    
+    changeColor(isDark.value)
 })
 async function changeColor(value: boolean) {
     let index = value ? 0 : 1;

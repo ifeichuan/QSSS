@@ -1,7 +1,9 @@
 <template>
   <Layout>
       <!-- <template #layout-top style="background:rgba(0, 0, 0, 0.5);"></template> -->
-      <template #doc-before></template>
+      <template #doc-before>
+        <DocHeader/>
+      </template>
       <template #doc-footer-before><DocFooter/></template>
       <!-- Home Slot -->
        <template #home-hero-after><HomeHero/></template>
@@ -15,8 +17,10 @@
   import { useData } from 'vitepress';
   import { nextTick, provide } from 'vue'
   import Pages from './Pages.vue'
+  import DocHeader from './DocHeader.vue';
+  import DocFooter from './DocFooter.vue'
   const {Layout} = DefaultTheme
-  const { isDark } = useData()
+  const { isDark,theme } = useData()
   // 检查浏览器是否支持视图过渡和用户是否偏好减少动画
   // 如果支持，则允许视图过渡
   // 如果不支持，则直接切换主题

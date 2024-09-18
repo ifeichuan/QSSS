@@ -4,11 +4,22 @@
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --vp-font-family-mono:"FOT-TsukuARdGothic Std D";
     --vp-nav-bg-color: rgba(255, 255, 255, 0.8);
+    
 }
 .dark{
-    /* --vp-nav-bg-color: rgba(44, 54, 57, 0.8); */
+    --vp-nav-bg-color: rgba(44, 54, 57, 0.8);
     /* --vp-c-bg: rgb(44, 54, 57); */
+    .page{
+        outline:  3px white solid;
+        box-shadow: 5px 5px rgb(255, 255, 255);
+        
+    }
+    .page:hover{
+        box-shadow: 5px 5px 0 3px white ;
+        background: #005291;
+    }
 }
-.VPNav{
+.VPNavBar{
     backdrop-filter: blur(10px);
+    /* background: rgba(255, 255, 255, 0.8); */
 }

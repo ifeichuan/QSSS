@@ -4,7 +4,7 @@
         <h2>Blogs</h2>
     </div>
     <div class="pages">
-        <div class="page" v-for="post,index in currPagePosts" :key="index">
+        <div class="page" v-for="post,index in currPagePosts" :key="index" >
             <!-- <div class="content"> -->
                 <a :href="post.link">
             <div class="title">{{post.text}}</div>
@@ -107,9 +107,11 @@ h2{
     margin:20px;
     width: 60vw;
     max-width: 800px;
-    border: 3px solid;
+    /* border: 3px solid; */
     border-radius: 10px;
-    box-shadow: 5px 5px;
+    box-shadow: 5px 5px ;
+    transition: all .3s ease;
+    outline:  3px solid;
 }
 .page .title{
     font-size: 1.5rem;
@@ -120,7 +122,10 @@ h2{
 }
 .page:hover{
     background:linear-gradient(to right, #0079d5, #0079d5);
+    transform: translate(-5px,-5px);
+    box-shadow: 5px 5px 0px 3px;
 }
+
 .pageFoot{
     display: flex;
     flex-direction: row;
