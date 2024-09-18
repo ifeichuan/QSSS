@@ -9,20 +9,21 @@
 import'gitalk/dist/gitalk.css'
 import Gitalk from 'gitalk';
 import { onMounted } from 'vue';
-import { useRoute } from 'vitepress';
+import { useRoute,onContentUpdated } from 'vitepress';
 
 // console.log(useRoute().data.title);
 
-const gitalk = new Gitalk({
+
+onMounted(()=>{
+    const gitalk = new Gitalk({
     clientID:'Ov23liwzcxCw5gaywY5K',
     clientSecret:'4f8318a101f427a94c16c1c0bde57b48a89afab6',
     repo:'QSSS',
     owner:'ifeichuan',
     admin:['ifeichuan'],
-    id:'WebComments',
-    title: useRoute().data.title
+    id:useRoute().data.title,
+    title:'WebComments' 
 })
-onMounted(()=>{
     gitalk.render("gitalk-container")
 })
 </script>
