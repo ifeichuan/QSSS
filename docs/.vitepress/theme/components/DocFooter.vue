@@ -1,10 +1,24 @@
 <template>
-111111111
+    <a href="/">back to home</a>
+    <div id="gitalk-container">
+
+    </div>
 </template>
 
 <script lang='ts' setup>
-
-
+import'gitalk/dist/gitalk.css'
+import Gitalk from 'gitalk';
+import { onMounted } from 'vue';
+const gitalk = new Gitalk({
+    clientID:'Ov23liwzcxCw5gaywY5K',
+    clientSecret:'4f8318a101f427a94c16c1c0bde57b48a89afab6',
+    repo:'gitalk_comments',
+    owner:'ifeichuan',
+    admin:['ifeichuan']
+})
+onMounted(()=>{
+    gitalk.render("gitalk-container")
+})
 </script>
 
 <style>

@@ -1,7 +1,6 @@
 <template>
     <div class="header">
 <h1>{{ data.title }}</h1>
-<hr>
 tags:<span v-for="tag,index in tags" :key="index">{{ tag }}</span>
 </div>
 </template>
@@ -16,8 +15,22 @@ let tags:Array<string> = data.frontmatter.tags
 <style scoped>
 /*  样式  */
 h1{
-    font-size: 2rem;
+    font-size:2.5rem;
     text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+h1::after{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin-bottom: 10px;
 }
 span{
     /* border-bottom: none; */
