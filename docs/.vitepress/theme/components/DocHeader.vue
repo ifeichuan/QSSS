@@ -20,28 +20,17 @@ h1{
     text-align: center;
 }
 span{
-    border-bottom: none;
+    /* border-bottom: none; */
     margin: 3px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%,rgba(11, 105, 200,0.5) 50%, rgb(11, 105, 200,0.5) 100%);
   /* padding: 5px; */
-  display: inline-block;
   position: relative;
   padding-bottom: 2px;
+  outline: 1px;
+  border-radius: 10px;
 }
 .header{
     margin-bottom: 50px;
 }
-span::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: #d78951;
-    transition: width 0.3s ease;
-}
-span:hover::after{
-    width: 100%;
-}
+
 </style>

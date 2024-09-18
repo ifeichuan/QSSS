@@ -10,7 +10,7 @@
        <template #home-features-after><Pages/></template>
   </Layout>
   </template>
-  
+   
   <script lang='ts' setup>
   import  DefaultTheme  from 'vitepress/theme';
   import HomeHero from './HomeHero.vue';

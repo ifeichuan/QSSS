@@ -133,19 +133,34 @@ h2{
     align-items: center;
     width: 60vw;
     max-width: 800px;
-    border: 3px solid;
+    /* border: 3px solid; */
     position: relative;
 }
 .previous{
     visibility: hidden;
     align-self: flex-start;
     margin: 10px;
+    position: relative;
 }
 .next{
     margin: 10px;
+    position: relative;
 }
 .currpage{
     /* position: absolute; */
     margin: 10px;
+}
+.next::after,.previous::after{
+content: "";
+left: 0;
+width: 0;
+bottom: 0;
+height: 2px;
+position: absolute;
+background-color: #0079d5;
+transition: all 0.3s ease;
+}
+.next:hover::after,.previous:hover::after{
+    width: 100%;
 }
 </style>
