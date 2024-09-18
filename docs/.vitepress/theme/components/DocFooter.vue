@@ -12,9 +12,10 @@ import { onMounted } from 'vue';
 const gitalk = new Gitalk({
     clientID:'Ov23liwzcxCw5gaywY5K',
     clientSecret:'4f8318a101f427a94c16c1c0bde57b48a89afab6',
-    repo:'gitalk_comments',
+    repo:'QSSS',
     owner:'ifeichuan',
-    admin:['ifeichuan']
+    admin:['ifeichuan'],
+    id:'Web comments'
 })
 onMounted(()=>{
     gitalk.render("gitalk-container")
