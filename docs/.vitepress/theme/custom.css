@@ -23,3 +23,26 @@
     backdrop-filter: blur(10px);
     /* background: rgba(255, 255, 255, 0.8); */
 }
+.vp-doc {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  
+  .vp-doc pre,
+  .vp-doc code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  .vp-doc table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  .vp-doc td,
+  .vp-doc th {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }

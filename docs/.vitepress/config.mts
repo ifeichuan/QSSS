@@ -37,7 +37,10 @@ async function config(){
     ]
   },
   markdown:{
-    math:true
+    math:true,
+    config:(md)=>{
+      md.options.breaks=true
+    }
   },
   base:'/',
   }
