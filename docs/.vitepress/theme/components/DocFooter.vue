@@ -19,7 +19,7 @@ const gitalk = new Gitalk({
     repo:'QSSS',
     owner:'ifeichuan',
     admin:['ifeichuan'],
-    id:useRoute().data.title,
+    id:'WebComments',
     title: useRoute().data.title
 })
 onMounted(()=>{

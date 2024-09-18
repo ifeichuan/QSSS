@@ -8,7 +8,8 @@ import { RssPlugin,RSSOptions } from 'vitepress-plugin-rss'
 let RSS:RSSOptions ={
   title:"扉川川のBlog",
   baseUrl:"https://feichuans.com",
-  copyright:"Copyright (c) 2024 扉川川"
+  copyright:"Copyright © 2024 扉川川",
+  
 }
 async function config(){
   return {lang: "zh-CN",
