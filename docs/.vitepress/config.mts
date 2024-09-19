@@ -16,7 +16,7 @@ async function config(){
   cleanUrls: true,
   srcDir: resolve(__dirname, '../../'),
   title: "扉川川のBlog",
-  description: "A VitePress Site",
+  description: "这个人很懒,还没有写介绍",
   head:[
     // ['link',{rel:'icon',href:'/public/logo.jpg'}],
   ],

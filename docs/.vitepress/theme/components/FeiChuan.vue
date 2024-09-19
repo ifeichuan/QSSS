@@ -52,6 +52,7 @@ const stopWatch = watch(isDark,(value)=>{
 .introduce{
     display: flex;
     height: 20vh;
+    margin-bottom: 30px;
 }
 /* 添加新的样式 */
 svg path {
