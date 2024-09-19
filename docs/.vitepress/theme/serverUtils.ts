@@ -6,10 +6,10 @@ const paths = await getPostMDFilePaths()
 const posts = paths.map((item)=>{
     const content = fs.readFileSync(item,'utf-8')
     const {data} = matter(content)
-    // console.log(data)
+    console.log(item);  
     return {
         text: data.title,
-        link: `posts/${item.split('/')[1].split('.')[0]}`,
+        link: item.split('.')[0],
         date: data.date_created.split(' ')[1].split(',')[0],
         tags: data.tags
     }
