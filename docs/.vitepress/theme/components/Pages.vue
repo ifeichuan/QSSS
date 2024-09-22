@@ -5,12 +5,10 @@
     </div>
     <div class="pages">
         <div class="page" v-for="post,index in currPagePosts" :key="index" >
-            <!-- <div class="content"> -->
                 <a :href="post.link">
             <div class="title">{{post.text}}</div>
             <div class="date">{{post.date}}</div>
         </a>
-        <!-- </div> -->
         </div>
         <div class="pageFoot">
             <!-- 11111111111 -->
@@ -23,7 +21,8 @@
 
 <script lang='ts' setup>
 import { useData } from 'vitepress';
-import { reactive, Ref, ref, toRef } from 'vue';
+import { reactive, Ref, ref, toRef, toRefs } from 'vue';
+import { TransitionGroup } from 'vue';
 const {theme} = useData()
 // console.log(theme.value.posts)
 let posts:Ref = toRef(theme.value.posts)
@@ -51,7 +50,7 @@ for(let i =0;i<postsLength;i++){
     else index++
 }
 console.log(allMap);
-let currPagePosts = reactive(allMap[0])
+let currPagePosts = allMap[0]
 function go(index:number){
     console.log(allMap[index]);
     currPagePosts = allMap[index]
@@ -77,6 +76,7 @@ function 增加页数(){
         go(currPage.value)
     }
 }
+
 </script>
 
 <style scoped>

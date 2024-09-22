@@ -1,16 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { resolve } from 'path'
-import fs from 'fs'
+// import fs, { link } from 'fs'
+import { buildBlogRSS } from './theme/rss'
 import { getPostsLength,getPosts } from './theme/serverUtils'
-import { RssPlugin,RSSOptions } from 'vitepress-plugin-rss'
 
 // https://vitepress.dev/reference/site-config
-let RSS:RSSOptions ={
-  title:"扉川川のBlog",
-  baseUrl:"https://feichuans.com",
-  copyright:"Copyright © 2024 扉川川",
-  
-}
+
+
 async function config(){
   return {lang: "zh-CN",
   cleanUrls: true,
@@ -24,7 +20,7 @@ async function config(){
     // "/posts/:page": "/:page.md"
   },
   vite:{
-    plugins:[RssPlugin(RSS)]
+    // plugins:[RssPlugin(RSS)]
   },
   themeConfig: {
     siteTitle:"扉川川の博客",
@@ -37,13 +33,15 @@ async function config(){
     },
     nav: [
       { text: '首页', link: '/' },
-      { text: '文章', link: '/archives' }
+      { text: '文章', link: '/archives' },
+      {text:'RSS',link:'https://feichuans.com/feed.xml'}
     ],
     // aside: false,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   },
+  buildEnd:buildBlogRSS,
   markdown:{
     math:true,
     config:(md)=>{
