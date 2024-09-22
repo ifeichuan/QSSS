@@ -72,8 +72,8 @@ async function writeFeed(name: string, items: Item[]) {
   const feed = new Feed(OPTIONS);
   items.forEach((item) => feed.addItem(item));
 
-  await fs.ensureDir(dirname(`./.vitepress/dist/${name}`));
-  await fs.writeFile(`./.vitepress/dist/${name}.xml`, feed.rss2(), "utf-8");
-  await fs.writeFile(`./.vitepress/dist/${name}.atom`, feed.atom1(), "utf-8");
-  await fs.writeFile(`./.vitepress/dist/${name}.json`, feed.json1(), "utf-8");
+  await fs.ensureDir(dirname(`./docs/.vitepress/dist/${name}`));
+  await fs.writeFile(`./docs/.vitepress/dist/${name}.xml`, feed.rss2(), "utf-8");
+  await fs.writeFile(`./docs/.vitepress/dist/${name}.atom`, feed.atom1(), "utf-8");
+  await fs.writeFile(`./docs/.vitepress/dist/${name}.json`, feed.json1(), "utf-8");
 }
