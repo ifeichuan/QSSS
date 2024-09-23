@@ -1,9 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { resolve } from 'path'
 // import fs, { link } from 'fs'
-import { buildBlogRSS } from './theme/rss'
+// import { buildBlogRSS } from './theme/rss'
 import { getPostsLength,getPosts } from './theme/serverUtils'
-import { text } from 'stream/consumers'
 
 // https://vitepress.dev/reference/site-config
 
@@ -16,7 +15,7 @@ async function config(){
   description: "这个人很懒,还没有写介绍",
   head:[
     ['link',{rel:'icon',href:'/public/logo.jpg'}],
-    ['script',{"defer":''},{"src":'https://cloud.umami.is/script.js',"data-website-id":"e68649b2-93c5-4ee5-abd9-78cca185ebed"}]
+    ['script',{defer:true,src:'https://cloud.umami.is/script.js',"data-website-id":"e68649b2-93c5-4ee5-abd9-78cca185ebed"}]
   ],
   rewrites:{
     // "/posts/:page": "/:page.md"
