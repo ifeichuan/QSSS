@@ -41,7 +41,7 @@ async function config(){
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   },
-  buildEnd:buildBlogRSS,
+  // buildEnd:buildBlogRSS,
   markdown:{
     math:true,
     config:(md)=>{
