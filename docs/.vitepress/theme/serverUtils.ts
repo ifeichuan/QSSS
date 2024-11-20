@@ -9,7 +9,7 @@ const posts = paths.map((item)=>{
     console.log(item);  
     return {
         text: data.title,
-        link: item.substr(0,item.length-3),
+        link: item.replace('.md',''),
         date: data.date_created.split(' ')[1].split(',')[0],
         tags: data.tags
     }
