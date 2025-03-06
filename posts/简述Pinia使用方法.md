@@ -6,7 +6,7 @@ tags:
   - Vue
   - Pinia
 date_created: 星期4 2025-03-06, 3:51:35 下午
-date_modified: 星期4 2025-03-06, 4:52:52 下午
+date_modified: 星期4 2025-03-06, 4:59:34 下午
 ---
 
 # 简述Pinia使用方法
@@ -127,3 +127,9 @@ store.$patch((state) => {
 ## 监听|订阅 State
 和使用 watch 一样只不过换成了 
 `$subscribe`
+
+## Getter
+简单来说就是 `computed`
+
+## Action
+简单来说就是方法并且支持异步
